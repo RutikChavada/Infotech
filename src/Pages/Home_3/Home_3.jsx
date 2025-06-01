@@ -1,14 +1,27 @@
 import React from "react";
+import img from "../../assets/contact1.jpg";
 import "./Home_3.css";
 
 function Home_3() {
-    return (
-        <>
-        <div className="main-container">
-            <h1>Hello world</h1>
+  return (
+    <>
+      <div className="main-container">
+        <div className="h3left">
+          <h1> Let's Discuss Your Project</h1>
+          <h3>
+            Tell us your ideas, and we'll help bring them to life. Let's turn
+            your vision into a powerful reality.
+          </h3>
+          <div className="button">
+            Contact Us
+          </div>
         </div>
-        </>
-    )
+        <div className="h3right">
+            <img src={img} alt="" />
+        </div>
+      </div>
+    </>
+  );
 }
 
 export default Home_3;

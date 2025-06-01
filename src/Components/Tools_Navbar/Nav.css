@@ -1,0 +1,54 @@
+.navbar {
+    padding-top: 40px;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar ul li {
+    list-style: none;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #3b3939;
+    font-size: 17px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid transparent; /* default */
+    transition: border-bottom 0.1s ease;
+    cursor: pointer;
+}
+
+.navbar ul li a:hover {
+    border-bottom: 3px solid #033b8a; /* hover effect */
+}
+
+.navbar ul li a.active {
+    border-bottom: 3px solid #033b8a; 
+}
+
+.image-box{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
+    max-width: 900px;
+    gap: 20px;
+    margin: 30px auto; /* Center horizontally with auto margin */
+    padding: 20px;
+}
+
+.gallery-img{
+    padding-top: 20px;
+    width: 80%;
+    height: 120px;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+}

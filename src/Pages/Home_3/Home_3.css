@@ -1,4 +1,44 @@
 .main-container{
-    min-height: 90vh;
-    background-color: rgb(255, 255, 255);
+    margin-top: 20px;
+    min-height: 30vh;
+    display: flex;
+    gap: 150px;
+    justify-content: center;
+    background-color: #033b8a;
+}
+
+.h3left{
+    padding-top: 30px;
+}
+
+.main-container .h3left h1{
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 40px;
+    line-height: 3rem;
+}
+
+.h3left h3{
+    color: white;
+    font-size: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    line-height: 2rem;
+}
+
+.button{
+    background-color: #fff;
+    color: #033b8a;
+    margin-top: 18px;
+    width: 11.6%;
+    padding: 10px 4%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.h3right img{
+    padding-top: 10px;
+    width: 180px;
+    height: 180px;
 }

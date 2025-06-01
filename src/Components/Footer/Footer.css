@@ -1,0 +1,24 @@
+.footer-container{
+    background-color: #033b8a;
+    min-height: 90vh;
+    display: flex;
+}
+
+.compny img{
+    width: 220px;
+    height: 100px;  
+}
+
+.compny p{
+    width: 300px;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+}
+
+.services{
+    display: flex;
+    flex-direction: column;
+}
