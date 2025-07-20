@@ -10,13 +10,14 @@ function Footer() {
         <>
             <div className="footer-container">
                 <div className="compny">
-                    <img src={logo} alt="" />
+                    {/* <img src={logo} alt="" /> */}
+                    <h1>Compny Logo</h1>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, vel.
                         Repudiandae, ab sit expedita quos quis officia autem ratione ex
-                        tenetur nemo assumenda minima quo doloribus, consequuntur odit
+                        {/* tenetur nemo assumenda minima quo doloribus, consequuntur odit
                         commodi voluptates. Voluptate in suscipit adipisci repudiandae
-                        distinctio quasi quis eligendi neque temporibus tempora.
+                        distinctio quasi quis eligendi neque temporibus tempora. */}
                     </p>
                 </div>
                 <div className="links">

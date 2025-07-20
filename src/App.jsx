@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 import Home from './Pages/HomePage/Home'
 import Navbar from './Components/Navbar/Navbar'
+import Services from './Pages/Services/Services'
 
 function App() {
 
@@ -15,6 +16,10 @@ function App() {
         {
           path: "/",
           element: <Home/>
+        },
+        {
+          path: "/services",
+          element: <Services/>
         }
       ]
     }

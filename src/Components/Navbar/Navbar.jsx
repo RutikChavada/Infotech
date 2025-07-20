@@ -33,20 +33,20 @@ function Navbar() {
             <div className={`nav ${isScrolled ? 'scrolled' : ''}`}>
                 <div className="bottomside">
                     <div className="logo">
-                        <img src={logo} alt="" />
+                        <h1>Logo</h1>
                     </div>
 
                     <div className="menu">
                         <ul>
-                            <li><a href="#" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</a></li>
+                            <li><a href="/" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Home</a></li>
                             <li className="dropdown">
-                                <a href="#">Services</a>
+                                <a href="services">Services</a>
                                 <ul className="dropdown-menu">
-                                    <li><a href="#">Web Development</a></li>
-                                    <li><a href="#">Mobile App Development</a></li>
-                                    <li><a href="#">UI/UX Design</a></li>
-                                    <li><a href="#">Cloud Solutions</a></li>
-                                    <li><a href="#">IT Consulting</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-circle-right"></i>&nbsp;&nbsp;&nbsp;Web Development</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-circle-right"></i>&nbsp;&nbsp;&nbsp;Mobile App Development</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-circle-right"></i>&nbsp;&nbsp;&nbsp;UI/UX Design</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-circle-right"></i>&nbsp;&nbsp;&nbsp;Cloud Solutions</a></li>
+                                    <li><a href="#"><i class="fas fa-chevron-circle-right"></i>&nbsp;&nbsp;&nbsp;IT Consulting</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Technologies</a></li>

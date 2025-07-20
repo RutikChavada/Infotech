@@ -1,5 +1,5 @@
 import React from "react";
-import img from "../../assets/contact1.jpg";
+import img from "../../assets/contact.jpg";
 import "./Home_3.css";
 
 function Home_3() {

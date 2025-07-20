@@ -4,7 +4,7 @@
     display: flex;
     gap: 150px;
     justify-content: center;
-    background-color: #033b8a;
+    background-color: black;
 }
 
 .h3left{
@@ -27,7 +27,7 @@
 
 .button1{
     background-color: #fff;
-    color: #033b8a;
+    color: black;
     margin-top: 18px;
     width: 11%;
     padding: 10px 4%;
