@@ -37,6 +37,12 @@
     font-size: 16px;
 }
 
+.button:hover{
+    transform: translateY(-3px) scale(1.05);
+    transition: all 0.3s ease-in-out;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3);
+}
+
 .h3right img{
     padding-top: 10px;
     width: 180px;

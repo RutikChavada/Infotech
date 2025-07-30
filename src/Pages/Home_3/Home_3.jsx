@@ -1,8 +1,10 @@
 import React from "react";
 import img from "../../assets/contact.jpg";
 import "./Home_3.css";
+import { useNavigate } from "react-router-dom";
 
 function Home_3() {
+  const navigate = useNavigate()
   return (
     <>
       <div className="main-container">
@@ -12,7 +14,9 @@ function Home_3() {
             Tell us your ideas, and we'll help bring them to life. Let's turn
             your vision into a powerful reality.
           </h3>
-          <div className="button">
+          <div className="button" onClick={() => {
+            window.scrollTo(0,0)
+            navigate("/contact")}}>
             Contact Us
           </div>
         </div>

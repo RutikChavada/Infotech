@@ -9,8 +9,10 @@ import image5 from "../../assets/home111.png";
 import Home_5 from "../Page_5/Page_5";
 import Home_6 from "../Home_6/Home_6";
 import Footer from "../../Components/Footer/Footer";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
+    const navigate = useNavigate()
     return (
         <>
             <div className="home-container">
@@ -39,10 +41,16 @@ function Home() {
                     </div>
 
                     <div className="buttons">
-                        <div className="contact">
+                        <div className="contact" onClick={() => {
+                            window.scrollTo(0,0);
+                            navigate('/contact');
+                        }}>
                             Get Started
                         </div>
-                        <div className="contact">
+                        <div className="contact" onClick={() => {
+                            window.scrollTo(0,0);
+                            navigate('/about');
+                        }}>
                             Learn More
                         </div>
                     </div>

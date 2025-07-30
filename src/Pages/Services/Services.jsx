@@ -12,6 +12,7 @@ import {
   faRocket
 } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../../Components/Footer/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const services = [
   {
@@ -65,6 +66,7 @@ const services = [
 ];
 
 function Services() {
+  const navigate = useNavigate();
   return (
     <div className="services-page">
       <div className="services-hero">
@@ -137,8 +139,14 @@ function Services() {
           <h2>Ready to Start Your Project?</h2>
           <p>Let's discuss how we can help bring your vision to life</p>
           <div className="cta-buttons">
-            <button className="cta-button primary">Get Started</button>
-            <button className="cta-button secondary">View Portfolio</button>
+            <button className="cta-button primary" onClick={() => {
+                            window.scrollTo(0,0);
+                            navigate('/contact');
+                        }}>Get Started</button>
+            <button className="cta-button secondary" onClick={() => {
+                            window.scrollTo(0,0);
+                            navigate('/portfolio');
+                        }}>View Portfolio</button>
           </div>
         </div>
       </div>

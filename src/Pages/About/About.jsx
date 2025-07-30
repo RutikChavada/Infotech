@@ -3,6 +3,7 @@ import './About.css';
 import harshil from '../../assets/harshil.jpg';
 import rutvik from '../../assets/rutvik.jpg';
 import Footer from '../../Components/Footer/Footer';
+import { useNavigate } from 'react-router-dom';
 
 const teamMembers = [
   {
@@ -52,6 +53,7 @@ const achievements = [
 ];
 
 function About() {
+  const navigate = useNavigate();
   return (
     <div className="about-page">
       {/* Hero Section */}
@@ -189,8 +191,14 @@ function About() {
           <h2>Ready to Work With Us?</h2>
           <p>Let's discuss how we can help bring your vision to life and drive your business forward with our expertise and innovative solutions.</p>
           <div className="cta-buttons">
-            <button className="cta-button primary">Start a Project</button>
-            <button className="cta-button secondary">Get in Touch</button>
+            <button className="cta-button primary" onClick={() => {
+                            window.scrollTo(0,0);
+                            navigate('/contact');
+                        }}>Start a Project</button>
+            <button className="cta-button secondary" onClick={() => {
+                            window.scrollTo(0,0);
+                            navigate('/contact');
+                        }}>Get in Touch</button>
           </div>
         </div>
       </div>

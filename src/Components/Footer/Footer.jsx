@@ -1,17 +1,17 @@
 import React from "react";
 import "./Footer.css";
-import logo from "../../assets/logo2.png";
+import logo from "../../assets/logo_footer.png";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebook, faLinkedin, faInstagram, faSquareTwitter,faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faLinkedin, faInstagram, faSquareTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 function Footer() {
     return (
         <>
             <div className="footer-container">
                 <div className="compny">
-                    {/* <img src={logo} alt="" /> */}
-                    <h1>Compny Logo</h1>
+                    <img src={logo} alt="" />
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, vel.
                         Repudiandae, ab sit expedita quos quis officia autem ratione ex
@@ -22,24 +22,12 @@ function Footer() {
                 </div>
                 <div className="links">
                     <h2>Quick Links</h2>
-                    <a href="#home">
-                        <i class="fas fa-chevron-circle-right"></i> home
-                    </a>
-                    <a href="#about">
-                        <i class="fas fa-chevron-circle-right"></i> about
-                    </a>
-                    <a href="#skills">
-                        <i class="fas fa-chevron-circle-right"></i> skills
-                    </a>
-                    <a href="#education">
-                        <i class="fas fa-chevron-circle-right"></i> education
-                    </a>
-                    <a href="#work">
-                        <i class="fas fa-chevron-circle-right"></i> work
-                    </a>
-                    <a href="#experience">
-                        <i class="fas fa-chevron-circle-right"></i> experience
-                    </a>
+                    <Link to="/" onClick={() => window.screenTo(0,0)}><i className="fas fa-chevron-circle-right"></i> Home</Link>
+                    <Link to="/services" onClick={() => window.screenTo(0,0)}><i className="fas fa-chevron-circle-right"></i> Services</Link>
+                    <Link to="/technologies" onClick={() => window.screenTo(0,0)}><i className="fas fa-chevron-circle-right"></i> Technologies</Link>
+                    <Link to="/portfolio" onClick={() => window.screenTo(0,0)}><i className="fas fa-chevron-circle-right"></i> Portfolio</Link>
+                    <Link to="/about" onClick={() => window.screenTo(0,0)}><i className="fas fa-chevron-circle-right"></i> About</Link>
+                    <Link to="/contact" onClick={() => window.screenTo(0,0)}><i className="fas fa-chevron-circle-right"></i> Contact</Link>
                 </div>
                 <div className="services">
                     <h2>Services</h2>

@@ -24,8 +24,10 @@
 }
 
 .logo img{
-  width: 150px;
-  height: 60px;
+  padding: 10px;
+  width: 140px;
+  height: 50px;
+  cursor: pointer;
 }
 
 .hamburger {
@@ -131,18 +133,77 @@
   display: block;
 }
 
+.menu ul li a.active::after {
+  /* border-bottom: 2px solid #000; */
+  /* You can adjust color, thickness, or add more styles if needed */
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  width: 0;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1), left 0.3s cubic-bezier(0.4,0,0.2,1);
+  z-index: 1;
+  width: 80%;
+  left: 10%;
+}
+
+.menu ul li a.active:hover{
+  width: 0;
+  left: 0;
+}
+
+.menu ul li a:hover,
+.menu ul li a.active {
+  transform: scale(1.05);
+}
+
+.menu ul li a:not(#contact)::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  width: 0;
+  height: 2px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 2px;
+  transition: width 0.3s cubic-bezier(0.4,0,0.2,1), left 0.3s cubic-bezier(0.4,0,0.2,1);
+  z-index: 1;
+}
+
+.menu ul li a:not(#contact):hover::after,
+.menu ul li a:not(#contact).active::after {
+  width: 80%;
+  left: 10%;
+}
+
 @media (max-width: 900px) {
   .bottomside {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding-right: 12px;
+    padding-left: 12px;
     min-height: 56px;
+    display: flex;
+    align-items: center;
   }
   .logo img {
     width: 110px;
     height: 44px;
+    padding: 6px 0;
+    margin-right: 8px;
   }
   .hamburger {
     display: block;
+    font-size: 2.2rem;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: none;
+    border: none;
+    z-index: 1300;
+    margin-left: auto;
   }
   .menu {
     position: fixed;
@@ -156,10 +217,15 @@
     padding: 0 0 20px 0;
     z-index: 1200;
     display: none;
-    transition: all 0.3s;
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
   }
   .menu.open {
     display: flex;
+    max-height: 600px;
+    opacity: 1;
   }
   .menu ul {
     flex-direction: column;
@@ -175,22 +241,40 @@
     display: block;
     width: 100%;
     font-size: 18px;
-    padding: 16px 24px;
+    padding: 20px 24px;
     border-radius: 0;
     border-bottom: 1px solid #eee;
+    text-align: left;
+    background: none;
+    margin: 0;
   }
   .menu ul li:last-child a {
     border-bottom: none;
   }
   .menu ul li a#contact {
-    margin: 12px 0 0 0;
+    margin: 18px 0 0 0;
     border-radius: 20px;
     width: auto;
-    padding: 12px 28px;
+    padding: 16px 28px;
     font-size: 18px;
   }
   .outlet {
     margin-top: 60px;
+  }
+  .menu ul li.dropdown .dropdown-menu {
+    position: static;
+    min-width: 100vw;
+    box-shadow: none;
+    border-radius: 0 0 12px 12px;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    left: 0;
+    top: 0;
+  }
+  .menu ul li.dropdown:hover .dropdown-menu,
+  .menu ul li.dropdown:focus-within .dropdown-menu {
+    display: block;
   }
 }
 
@@ -198,16 +282,68 @@
   .logo img {
     width: 80px;
     height: 32px;
+    padding: 4px 0;
   }
   .bottomside {
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 4px;
+    padding-left: 4px;
     min-height: 48px;
   }
   .menu {
     top: 48px;
   }
+  .menu ul li a {
+    font-size: 16px;
+    padding: 16px 12px;
+  }
+  .menu ul li a#contact {
+    font-size: 16px;
+    padding: 14px 18px;
+    margin: 16px auto 0 auto;
+    display: block;
+    width: 90%;
+    text-align: center;
+    border-radius: 24px;
+  }
+ 
   .outlet {
     margin-top: 48px;
+  }
+}
+
+@media (max-width: 400px) {
+  .logo img {
+    width: 70px;
+    height: 30px;
+    padding: 5px 0;
+  }
+  .bottomside {
+    padding-right: 1px;
+    padding-left: 1px;
+    min-height: 40px;
+    width: 100%;
+  }
+  .menu {
+    top: 60px;
+    border: 1px solid black;
+    width: 100%;
+  }
+  .menu ul li a {
+    font-size: 14px;
+    padding: 12px 0px;
+    text-align: center;
+  }
+  .menu ul li a#contact {
+    font-size: 14px;
+    padding: 12px 10px;
+    margin: 12px auto 0 auto;
+    display: block;
+    width: 50%;
+    text-align: center;
+    border-radius: 24px;
+  }
+  
+  .outlet {
+    margin-top: 60px;
   }
 }

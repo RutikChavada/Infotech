@@ -54,6 +54,7 @@
 
 .links a, .services a {
     color: white;
+    cursor:default;
     text-decoration: none;
     transition: all 0.3s ease;
     display: flex;
@@ -63,7 +64,6 @@
 }
 
 .links a:hover, .services a:hover {
-    color: #007bff;
     transform: translateX(5px);
 }
 
@@ -87,7 +87,7 @@
 }
 
 .part1 a:hover, .part2 a:hover {
-    color: #007bff;
+    transform: translateX(5px);
 }
 
 .contactinfo p {
@@ -113,7 +113,6 @@
 }
 
 .icons svg:hover {
-    color: #007bff;
     transform: translateY(-3px);
 }
 
